@@ -8,6 +8,9 @@
 % -ydy 2015.9.14-
 % beta version
 % -ydy 2015.11.3-
+% beta 0.2 version
+% fixed SeparatePredictors:2 problem
+% -ydy 2015.11.6-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -45,7 +48,7 @@ for i=1:length(subject)
     end
     bvqx.PrintToLog([num2str(i) ' Subject ', subject{i}, ' Done.']);
 end%subject
-
+doc.separationOfSubjectPredictors=1; % fix to SeparatePredictors:2 -ydy 151106-
 doc.SaveMultiStudyGLMDefinitionFile([group_dir '\group_' sdmname '.mdm']);
 bvqx.PrintToLog('MDM file finished!');
 % doc.LoadMultiStudyGLMDefinitionFile([PathName 'MultiStudy_fromBVQXMatlabScript.mdm'])
